@@ -35,9 +35,11 @@
   }
 }
 @media (max-width: 767px) {
-  .header-one .header-content-area {
-    height: 500px;
-  }
+  /* .header-one .header-content-area {
+    height: 500px; 
+
+  } */
+
 }
 .header-one .header-content-area .primary-btn-outline {
   color: var(--primary);

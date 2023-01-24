@@ -53,9 +53,9 @@ iframe {
 .custom-mb {
     margin-bottom: 3rem;
 }
-form{
-    background-color:var(--white);
-    padding:2rem;
+form {
+    background-color: #fbe1ec;
+    padding-top: 1.5rem;
 }
 .home-btn {
     color: var(--primary) !important;
@@ -96,12 +96,28 @@ p {
     font-weight: bold;
 }
 .home-register {
-    background-color: white;
+    background-color: #fbe1ec;
     z-index: 9999;
-    position:relative;
+    position: relative;
     padding: 20px;
 }
 .home-reg-head {
     color: white;
     background-color: #e6327f;
+}
+.custom-input {
+    width: 100% !important;
+    height: 2rem !important;
+}
+.text-box {
+    width: 100% !important;
+}
+.col-form-label {
+    text-transform: uppercase;
+    vertical-align: center;
+}
+@media (max-width: 767px) {
+    .home-register {
+        margin-top: 5rem !important;
+    } 
 }
