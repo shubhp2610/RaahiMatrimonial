@@ -1,0 +1,237 @@
+﻿@using System.Web.UI.WebControls
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--====== Title ======-->
+    <title>@ViewBag.title</title>
+
+    <link rel="shortcut icon"
+          href="~/assets/images/favicon.svg"
+          type="image/svg" />
+
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/lineicons.css" />
+    <link rel="stylesheet" href="~/assets/scss/starter.css" />
+    <link rel="stylesheet" href="~/assets/scss/navbars/navbar-06.css" />
+    <link rel="stylesheet" href="~/assets/scss/headers/header-01.css" />
+    <link rel="stylesheet" href="~/assets/scss/cards/card-01.css" />
+    <link rel="stylesheet" href="~/assets/scss/call-to-action/call-to-action-01.css" />
+    <link rel="stylesheet" href="~/assets/scss/contact/contact-01.css" />
+    <link rel="stylesheet" href="~/assets/scss/footers/footer-02.css" />
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />"" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+
+<body>
+<section class="navbar-area navbar-six">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            <img src="~/assets/images/logo.svg" alt="Logo" />
+                        </a>
+
+                        <button class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarSix"
+                                aria-controls="navbarSix"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSix">
+                            <ul class="navbar-nav ms-auto">
+
+                                <li class="nav-item">
+	                                
+                                    @{
+	                                    if (ViewBag.title == "Raahi Matrimonial")
+	                                    {
+		                                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "active" });
+
+	                                    }
+	                                    else
+	                                    {
+		                                    @Html.ActionLink("Home", "Index", "Home");
+	                                    }
+                                    }
+	                                </li>
+                                <li class="nav-item">
+
+                                    @{
+                                        if (ViewBag.title == "About US")
+                                        {
+                                            @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "active" });
+
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("About", "About", "Home")
+                                        }
+                                    }
+                                <li class="nav-item">
+	                                @Html.ActionLink("Login", "About", "Home")
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("Success Stories", "About", "Home")
+                                </li>
+                                <li class="nav-item">
+	                                @{
+		                                if (ViewBag.title == "Contact US")
+		                                {
+			                                @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "active" });
+
+		                                }
+		                                else
+		                                {
+			                                @Html.ActionLink("Contact", "Contact", "Home")
+		                                }
+	                                }
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </nav>
+                    <!-- navbar -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </section>
+    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+	<div>
+    <main role="main">
+        @RenderBody()
+    </main>
+    </div>
+
+    <footer class="footer-area footer-two">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-4 col-sm-12">
+                        <div class="f-about">
+                            <div class="footer-logo">
+                                <a href="javascript:void(0)">
+                                    <img src="~/assets/images/footer/logo.svg" alt="Logo" />
+                                </a>
+                            </div>
+                            <p class="text">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.
+                            </p>
+                            <ul class="social">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-facebook-filled"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-twitter-original"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-instagram-filled"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-linkedin-original"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-4">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Company</h6>
+                            <ul>
+                                <li><a href="javascript:void(0)">About</a></li>
+                                <li><a href="javascript:void(0)">Contact</a></li>
+                                <li><a href="javascript:void(0)">Marketing</a></li>
+                            </ul>
+                        </div>
+                        <!-- footer link -->
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Services</h6>
+                            <ul>
+                                <li><a href="javascript:void(0)">Products</a></li>
+                                <li><a href="javascript:void(0)">Business</a></li>
+                                <li><a href="javascript:void(0)">Developer</a></li>
+                            </ul>
+                        </div>
+                        <!-- footer link -->
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Help & Suuport</h6>
+                            <ul>
+                                <li><a href="javascript:void(0)">Support Center</a></li>
+                                <li><a href="javascript:void(0)">FAQ</a></li>
+                                <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                        <!-- footer link -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- footer widget -->
+
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p class="text">Copyright © 2022 UIdeck. All Rights Reserved</p>
+                        </div>
+                        <!-- copyright -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- footer copyright -->
+    </footer>
+
+
+    <!--====== NAVBAR SIX PART ENDS ======-->
+    <!--====== Bootstrap js ======-->
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        //===== close navbar-collapse when a  clicked
+        let navbarTogglerSix = document.querySelector(
+            ".navbar-six .navbar-toggler"
+        );
+        navbarTogglerSix.addEventListener("click", function () {
+            navbarTogglerSix.classList.toggle("active");
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

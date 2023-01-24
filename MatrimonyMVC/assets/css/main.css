@@ -1,0 +1,107 @@
+﻿:root {
+    --primary: #E6327F;
+    --primary-dark: #b5165a;
+    --black: #000;
+}
+.btn-primary{
+    background-color : var(--primary);
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    color:var(--white);
+}
+.p{
+    color:var(--black);
+}
+.home-success-stories {
+    background-color: #fbe2ed;
+}
+.card-style-one{
+    background-color:var(--white);
+}
+.text{
+    color:var(--black);
+}
+iframe {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+.header-area h1 {
+    color: var(--white) !important;
+}
+.header-area p {
+    color: var(--white) !important;
+}
+.header-area::before {
+    content: "";
+    background-image: url("/assets/images/bg1.png");
+    /*background-image: url("https://assets.gqindia.com/photos/60759a8d23780a7fa9a3ecfd/master/pass/4-Indian-matrimonial-portal-that-cater-only-to-HNIs-and-can-cost-upto-Rs-5-lakh-just-to-get-registered.jpg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+}
+.custom-mt {
+    margin-top: 3rem;   
+}
+.custom-mb {
+    margin-bottom: 3rem;
+}
+form{
+    background-color:var(--white);
+    padding:2rem;
+}
+.home-btn {
+    color: var(--primary) !important;
+    background-color: var(--white) !important;
+}
+hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    color: var(--black);
+}
+.contact-map {
+    height: 60vh;
+}
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-card {
+    margin-top: -10rem;
+    background-color: var(--white);
+    padding: 0px;
+    border: 2px var(--primary) solid;
+}
+.contact-card h2 {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0px 25px;
+}
+.contact-card .contact-card-details {
+    padding: 0px 25px;
+}
+.text {
+    color: #0c0c0c !important;
+}
+.lni {
+    font-weight: bold;
+}
+.home-register {
+    background-color: white;
+    z-index: 9999;
+    position:relative;
+    padding: 20px;
+}
+.home-reg-head {
+    color: white;
+    background-color: #e6327f;
+}

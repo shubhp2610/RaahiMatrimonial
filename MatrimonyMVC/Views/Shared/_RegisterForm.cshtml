@@ -1,0 +1,98 @@
+﻿@model MatrimonyMVC.Models.RegisterModel
+<form action="/Home/FormPage" method="post">
+	
+	<div class="form-group row">
+        @Html.LabelFor(model => model.ProfileFor, "Profile for", new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.DropDownListFor(m => m.ProfileFor, new List<SelectListItem>
+            { new SelectListItem{Text="Myself", Value="Myself"},
+                new SelectListItem{Text="Son", Value="Son"},
+                new SelectListItem{Text="Daughter", Value="Daughter"},
+                new SelectListItem{Text="Brother", Value="Brother"},
+                new SelectListItem{Text="Sister", Value="Sister"},
+                new SelectListItem{Text="Relative", Value="Relative"},
+                new SelectListItem{Text="Friend", Value="Friend"}
+            }, "Please select", new { @class = "" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Name, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(model => model.Name, new { @class = "" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Gender, "Gender", new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.RadioButtonFor(model => model.Gender, true)
+            <span>Male</span>
+
+            @Html.RadioButtonFor(model => model.Gender, false)
+            <span>Female</span>
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(model => model.BirthDate, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(model => model.BirthDate, new { @class = "" })
+        </div>
+    </div>
+	<div class="form-group row">
+		@Html.LabelFor(model => model.Religion, "Religion", new { @class = "col-sm-4 col-form-label" })
+		<div class="col-sm-8">
+			@Html.DropDownListFor(m => m.Religion, new List<SelectListItem>
+			{ new SelectListItem{Text="Muslim", Value="Muslim"},
+				new SelectListItem{Text="Hindu", Value="Hindu"},
+				new SelectListItem{Text="Christian", Value="Christian"},
+				new SelectListItem{Text="Sikh", Value="Sikh"},
+				new SelectListItem{Text="Jain", Value="Jain"},
+				new SelectListItem{Text="Buddhist", Value="Buddhist"},
+				new SelectListItem{Text="Relative", Value="Relative"},
+				new SelectListItem{Text="No Religious Belief", Value="NoReligiousBelief"}
+			}, "Please select", new { @class = "" })
+		</div>
+	</div>
+	<div class="form-group row">
+		@Html.LabelFor(model => model.Education, "Education", new { @class = "col-sm-4 col-form-label" })
+		<div class="col-sm-8">
+			@Html.DropDownListFor(m => m.Education, new List<SelectListItem>
+			{ new SelectListItem{Text="B.Sc.", Value="B.Sc."},
+				new SelectListItem{Text="M.Sc.", Value="M.Sc."},
+				new SelectListItem{Text="LLB", Value="LLB"},
+				new SelectListItem{Text="LLM", Value="LLM"}
+			}, "Please select", new { @class = "" })
+		</div>
+	</div>
+    <div class="form-group row">
+        @Html.LabelFor(model => model.MobileNo, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(model => model.MobileNo, new { @class = "" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(model => model.Email, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(model => model.Email, new { @class = "" })
+        </div>
+    </div>
+    
+    <div style=" text-align: end;">
+	<input type="submit" class="btn btn-primary" value="REGISTER ME" />
+    </div>
+</form>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('input[type=datetime]').datepicker({
+            dateFormat: "dd/mm/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-60:+0"
+        });
+
+    });
+</script>
