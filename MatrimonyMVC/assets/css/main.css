@@ -121,3 +121,12 @@ p {
         margin-top: 5rem !important;
     } 
 }
+input {
+    border: 1px grey solid;
+}
+select {
+    border: 1px grey solid;
+}
+    input:focus, select:focus {
+        border: 1px black solid;
+    }
