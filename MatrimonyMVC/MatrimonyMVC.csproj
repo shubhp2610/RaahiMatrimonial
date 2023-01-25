@@ -535,6 +535,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_RegisterForm.cshtml" />
     <Content Include="Views\Home\FormPage.cshtml" />
+    <Content Include="Views\Home\SuccessStories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

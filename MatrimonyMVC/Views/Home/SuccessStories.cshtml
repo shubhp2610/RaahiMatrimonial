@@ -1,0 +1,70 @@
+﻿<section>
+	
+	@{
+		string[] arr = new string[8];
+		arr[0]="http://www.swayamwar4u.com/storage/user-images/1669032924.jpg";
+		arr[1]= "http://www.swayamwar4u.com/storage/user-images/1669033272.jpg";
+		arr[2]="http://www.swayamwar4u.com/storage/user-images/1669033660.jpg";
+		arr[3]="http://www.swayamwar4u.com/storage/user-images/1669986695.jpg";
+		arr[4]= "http://www.swayamwar4u.com/storage/user-images/1671789082.jpg";
+		arr[5]="http://www.swayamwar4u.com/storage/user-images/1671790716.jpg";
+		arr[6]="http://www.swayamwar4u.com/storage/user-images/1672050953.jpg";
+		arr[7]="http://www.swayamwar4u.com/storage/user-images/1674211626.jpg";
+		string bef = " <div class=\"col\"> <div class=\"card\"> <img src=\"";
+		string aft = "\" class=\"card-img-top\" /> <div class=\"card-body\"> <h5 class=\"card-title\">Abcdefg Xyzabc & Xyzabc Abcdefg</h5> </div> </div> </div>";
+
+
+		string res = "";
+		foreach (string url in arr)
+		{
+			res += bef + url + aft;
+		}
+	}
+
+	<div class="container">
+	    <h2 class="pb-4 pt-4">Success Stories</h2>
+        <div class="alert p-0 pt-2 pb-2"  role="alert">
+            <h5 style=" color: var(--primary);"> <b>Raahi Matrimonial Team</b>, congratulates all the couples and wishes them very happy future! 🎉</h5>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4 row-cols-md-2 g-4">
+            <!--<div class="col">
+        <div class="card">
+            <img src="http://www.swayamwar4u.com/storage/user-images/1604499174.png" class="card-img-top"
+                />
+            <div class="card-body">
+                <h5 class="card-title">Abcdefg Xyzabc & Xyzabc Abcdefg</h5>
+            </div>
+        </div>
+    </div>-->
+            @(new HtmlString(res))
+
+
+        </div>
+	    <div class="row mt-4 mb-4">
+		    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="align-self: center">
+                <p>Showing 10 entries out of 330</p>
+		    </div>
+		    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+			    <nav aria-label="Page navigation example">
+				    <ul class="pagination flex-wrap  justify-content-end">
+					    <li class="page-item disabled">
+						    <a class="page-link" href="#" tabindex="-1">Previous</a>
+					    </li>
+					    <li class="page-item"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item">
+						    <a class="page-link" href="#">Next</a>
+					    </li>
+				    </ul>
+			    </nav>
+		    </div>
+	    </div>
+    </div>
+</section>

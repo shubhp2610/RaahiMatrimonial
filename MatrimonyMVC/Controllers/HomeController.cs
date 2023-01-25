@@ -16,14 +16,20 @@ namespace MatrimonyMVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.title = "About US";
+            ViewBag.title = "About US - Raahi Matrimonial";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.title = "Contact US";
+            ViewBag.title = "Contact US - Raahi Matrimonial";
+
+            return View();
+        }
+        public ActionResult SuccessStories()
+        {
+            ViewBag.title = "Success Stories - Raahi Matrimonial";
 
             return View();
         }
